@@ -5,7 +5,7 @@
 [![Node.js](https://img.shields.io/badge/Node.js-%3E%3D18-green)](https://nodejs.org)
 
 A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) server for the Discord API using [discord.js](https://discord.js.org/) v14.
-Provides 27 tools for managing Discord servers, channels, messages, users, roles, and more — all accessible from MCP-compatible clients like Claude Desktop, Claude Code, and Cursor.
+Provides 31 tools for managing Discord servers, channels, messages, users, roles, and more — all accessible from MCP-compatible clients like Claude Desktop, Claude Code, and Cursor.
 
 ## Quick Start
 
@@ -132,7 +132,7 @@ npm start
 
 | Tool | Description |
 |------|-------------|
-| `create_text_channel` | Create a new text channel |
+| `create_channel` | Create a new channel (text, voice, announcement, stage, or forum) |
 | `delete_channel` | Delete a channel |
 | `find_channel` | Find a channel by name |
 | `list_channels` | List all channels in the server |
@@ -175,7 +175,7 @@ npm start
 ## Documentation
 
 - [Setup Guide](./docs/setup.md) — Bot creation, environment setup, and detailed configuration
-- [Tools Reference](./docs/tools-reference.md) — Full parameter reference for all 27 tools
+- [Tools Reference](./docs/tools-reference.md) — Full parameter reference for all 31 tools
 
 ## License
 
