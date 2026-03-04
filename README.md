@@ -78,7 +78,7 @@ Add to `~/.cursor/mcp.json` or `.cursor/mcp.json` in your project:
 docker run --rm -i \
   -e DISCORD_TOKEN=your_token \
   -e DISCORD_GUILD_ID=your_guild_id \
-  taeraekim/discord-mcp:latest
+  taerae/discord-mcp:latest
 ```
 
 ### From Source

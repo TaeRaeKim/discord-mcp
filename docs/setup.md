@@ -122,7 +122,7 @@ See [Cursor MCP docs](https://docs.cursor.com/context/model-context-protocol) fo
 docker run --rm -i \
   -e DISCORD_TOKEN=your_token \
   -e DISCORD_GUILD_ID=your_guild_id \
-  taeraekim/discord-mcp:latest
+  taerae/discord-mcp:latest
 ```
 
 Or in your MCP client config:
@@ -136,7 +136,7 @@ Or in your MCP client config:
         "run", "--rm", "-i",
         "-e", "DISCORD_TOKEN=your_token",
         "-e", "DISCORD_GUILD_ID=your_guild_id",
-        "taeraekim/discord-mcp:latest"
+        "taerae/discord-mcp:latest"
       ]
     }
   }
