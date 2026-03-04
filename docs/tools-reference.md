@@ -1,6 +1,6 @@
 # 도구 레퍼런스
 
-Discord MCP 서버가 제공하는 27개 도구의 전체 레퍼런스입니다.
+Discord MCP 서버가 제공하는 37개 도구의 전체 레퍼런스입니다.
 
 > 모든 `guildId` 파라미터는 선택사항이며, 생략 시 환경변수 `DISCORD_GUILD_ID` 값을 사용합니다.
 
@@ -292,3 +292,60 @@ Discord MCP 서버가 제공하는 27개 도구의 전체 레퍼런스입니다.
 | `userId` | string | O | 사용자 ID |
 | `roleId` | string | O | 역할 ID |
 | `guildId` | string | X | 길드 ID |
+
+---
+
+## Pins (3개)
+
+### `pin_message`
+채널의 메시지를 고정합니다.
+
+| 파라미터 | 타입 | 필수 | 설명 |
+|---------|------|------|------|
+| `channelId` | string | O | 채널 ID |
+| `messageId` | string | O | 메시지 ID |
+
+### `unpin_message`
+고정된 메시지를 해제합니다.
+
+| 파라미터 | 타입 | 필수 | 설명 |
+|---------|------|------|------|
+| `channelId` | string | O | 채널 ID |
+| `messageId` | string | O | 메시지 ID |
+
+### `list_pinned_messages`
+채널의 고정 메시지 목록을 조회합니다.
+
+| 파라미터 | 타입 | 필수 | 설명 |
+|---------|------|------|------|
+| `channelId` | string | O | 채널 ID |
+
+---
+
+## Permissions (3개)
+
+### `set_channel_permission`
+채널에 역할 또는 멤버의 권한 오버라이드를 설정합니다.
+
+| 파라미터 | 타입 | 필수 | 설명 |
+|---------|------|------|------|
+| `channelId` | string | O | 채널 ID |
+| `targetId` | string | O | 역할 또는 사용자 ID |
+| `targetType` | string | O | `"role"` 또는 `"member"` |
+| `allow` | string[] | X | 허용할 권한 플래그 (예: `["SendMessages", "ViewChannel"]`) |
+| `deny` | string[] | X | 거부할 권한 플래그 (예: `["SendMessages", "ViewChannel"]`) |
+
+### `remove_channel_permission`
+채널의 권한 오버라이드를 제거합니다.
+
+| 파라미터 | 타입 | 필수 | 설명 |
+|---------|------|------|------|
+| `channelId` | string | O | 채널 ID |
+| `targetId` | string | O | 역할 또는 사용자 ID |
+
+### `get_channel_permissions`
+채널의 모든 권한 오버라이드를 조회합니다.
+
+| 파라미터 | 타입 | 필수 | 설명 |
+|---------|------|------|------|
+| `channelId` | string | O | 채널 ID |

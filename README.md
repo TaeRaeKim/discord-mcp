@@ -5,7 +5,7 @@
 [![Node.js](https://img.shields.io/badge/Node.js-%3E%3D18-green)](https://nodejs.org)
 
 A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) server for the Discord API using [discord.js](https://discord.js.org/) v14.
-Provides 31 tools for managing Discord servers, channels, messages, users, roles, and more — all accessible from MCP-compatible clients like Claude Desktop, Claude Code, and Cursor.
+Provides 37 tools for managing Discord servers, channels, messages, users, roles, and more — all accessible from MCP-compatible clients like Claude Desktop, Claude Code, and Cursor.
 
 ## Quick Start
 
@@ -172,10 +172,26 @@ npm start
 | `assign_role` | Assign a role to a user |
 | `remove_role` | Remove a role from a user |
 
+### Pins (3)
+
+| Tool | Description |
+|------|-------------|
+| `pin_message` | Pin a message in a text channel |
+| `unpin_message` | Unpin a message in a text channel |
+| `list_pinned_messages` | List all pinned messages in a channel |
+
+### Permissions (3)
+
+| Tool | Description |
+|------|-------------|
+| `set_channel_permission` | Set permission overwrite for a role or member on a channel |
+| `remove_channel_permission` | Remove a permission overwrite from a channel |
+| `get_channel_permissions` | Get all permission overwrites for a channel |
+
 ## Documentation
 
 - [Setup Guide](./docs/setup.md) — Bot creation, environment setup, and detailed configuration
-- [Tools Reference](./docs/tools-reference.md) — Full parameter reference for all 31 tools
+- [Tools Reference](./docs/tools-reference.md) — Full parameter reference for all 37 tools
 
 ## License
 

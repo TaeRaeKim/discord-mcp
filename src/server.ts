@@ -7,6 +7,8 @@ import { registerCategoryTools } from "./tools/categories";
 import { registerWebhookTools } from "./tools/webhooks";
 import { registerThreadTools } from "./tools/threads";
 import { registerRoleTools } from "./tools/roles";
+import { registerPinTools } from "./tools/pins";
+import { registerPermissionTools } from "./tools/permissions";
 
 export function createMcpServer(): McpServer {
   const server = new McpServer({
@@ -22,6 +24,8 @@ export function createMcpServer(): McpServer {
   registerWebhookTools(server);
   registerThreadTools(server);
   registerRoleTools(server);
+  registerPinTools(server);
+  registerPermissionTools(server);
 
   return server;
 }
